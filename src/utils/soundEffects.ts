@@ -4,7 +4,7 @@ import { Platform } from 'react-native';
  * Audio synthesizer for pleasant bell & chime notifications
  * Works natively on Web with Web Audio API, and gracefully degrades if unavailable.
  */
-class SoundSynthesizer {
+export class SoundSynthesizer {
   private audioCtx: any = null;
 
   private getContext() {
@@ -12,7 +12,10 @@ class SoundSynthesizer {
     if (typeof window === 'undefined') return null;
 
     if (!this.audioCtx) {
-      const AudioCtx = window.AudioContext || (window as any).webkitAudioContext;
+      const AudioCtx =
+        typeof window !== 'undefined'
+          ? (window as any).AudioContext || (window as any).webkitAudioContext
+          : null;
       if (AudioCtx) {
         this.audioCtx = new AudioCtx();
       }
@@ -108,3 +111,4 @@ class SoundSynthesizer {
 }
 
 export const soundEffects = new SoundSynthesizer();
+export default soundEffects;

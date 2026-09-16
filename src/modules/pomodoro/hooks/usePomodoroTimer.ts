@@ -4,7 +4,7 @@ import { useSettingsStore } from '@/modules/settings/store/useSettingsStore';
 import { useTaskStore } from '@/modules/tasks/store/useTaskStore';
 import { useStatsStore } from '@/modules/stats/store/useStatsStore';
 import { useHaptics } from '@/hooks/useHaptics';
-import { soundEffects } from '@/utils/soundEffects';
+import { soundEffects } from '@/utils';
 import { PomodoroMode } from '../types/pomodoro.types';
 
 export function usePomodoroTimer() {

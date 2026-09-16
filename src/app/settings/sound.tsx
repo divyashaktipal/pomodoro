@@ -14,7 +14,7 @@ import { Card } from '@/components/Card';
 import { Button } from '@/components/Button';
 import { useThemedStyles } from '@/hooks/useThemedStyles';
 import { useHaptics } from '@/hooks/useHaptics';
-import { soundEffects } from '@/utils/soundEffects';
+import { soundEffects } from '@/utils';
 import { useSettingsStore } from '@/modules/settings/store/useSettingsStore';
 import { SettingItem } from '@/modules/settings/components/SettingItem';
 import { ThemeColors } from '@/constants/colors';

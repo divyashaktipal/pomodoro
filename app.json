@@ -7,20 +7,8 @@
     "icon": "./assets/images/icon.png",
     "scheme": "pomodoroapp",
     "userInterfaceStyle": "automatic",
-    "jsEngine": "hermes",
-    "splash": {
-      "image": "./assets/images/splash-icon.png",
-      "resizeMode": "contain",
-      "backgroundColor": "#0F1117",
-      "dark": {
-        "image": "./assets/images/splash-icon.png",
-        "resizeMode": "contain",
-        "backgroundColor": "#0F1117"
-      }
-    },
     "ios": {
-      "icon": "./assets/expo.icon",
-      "jsEngine": "hermes"
+      "icon": "./assets/expo.icon"
     },
     "android": {
       "adaptiveIcon": {
@@ -29,8 +17,8 @@
         "backgroundImage": "./assets/images/android-icon-background.png",
         "monochromeImage": "./assets/images/android-icon-monochrome.png"
       },
-      "jsEngine": "hermes",
-      "predictiveBackGestureEnabled": false
+      "predictiveBackGestureEnabled": false,
+      "package": "com.divyashakti.pomodoroapp"
     },
     "web": {
       "output": "static",
@@ -50,11 +38,18 @@
             "image": "./assets/images/splash-icon.png"
           }
         }
-      ]
+      ],
+      "expo-font"
     ],
     "experiments": {
       "typedRoutes": true,
       "reactCompiler": true
+    },
+    "extra": {
+      "router": {},
+      "eas": {
+        "projectId": "a7e6d014-5c9e-48df-a2d1-b2c96a90155b"
+      }
     }
   }
 }
